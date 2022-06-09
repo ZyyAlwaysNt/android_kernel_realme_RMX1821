@@ -841,6 +841,8 @@ KBUILD_CPPFLAGS += -DTARGET_WATERMELON_Q_PROJECT
 CFLAGS_KERNEL   += -DTARGET_WATERMELON_Q_PROJECT
 CFLAGS_MODULE   += -DTARGET_WATERMELON_Q_PROJECT
 export TARGET_WATERMELON_Q_PROJECT=yes
+# These result in bogus false positives
+KBUILD_CFLAGS += $(call cc-disable-warning, dangling-pointer)
 
 ifdef CONFIG_FRAME_POINTER
 KBUILD_CFLAGS	+= -fno-omit-frame-pointer -fno-optimize-sibling-calls
