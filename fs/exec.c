@@ -1272,26 +1272,8 @@ void __set_task_comm(struct task_struct *tsk, const char *buf, bool exec)
 	mtk_pidmap_update(tsk);
 
 #ifdef CONFIG_PROC_APPBLOCKER
-	if (!strncmp(buf, "com.tencent.ig", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.pubg.imobile", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.tencent.mm", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.vkontakte.android", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.tencent.mobileqq", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.tencent.tim", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.tencent.iglite", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.tencent.igce", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.epicgames.fortnite", TASK_COMM_LEN) ||
-		!strncmp(buf, "com.sunborn.girlsfrontline.en", TASK_COMM_LEN) ||
-		!strncmp(buf, "aoapp.musically", TASK_COMM_LEN) ||
-		!strncmp(buf, "droid.ugc.trill", TASK_COMM_LEN) ||
-		!strncmp(buf, "id.ugc.trill.go", TASK_COMM_LEN) ||
-		!strncmp(buf, "video.like", TASK_COMM_LEN) ||
-		!strncmp(buf, "video.like.lite", TASK_COMM_LEN) ||
-		!strncmp(buf, "buzz.share", TASK_COMM_LEN) ||
-		!strncmp(buf, "buzz.share.lite", TASK_COMM_LEN) ||
-		!strncmp(buf, "droid.ugc.boom", TASK_COMM_LEN) ||
-		!strncmp(buf, "droid.ugc.boomlite", TASK_COMM_LEN) ||
-		!strncmp(buf, "rlsfrontline.en", TASK_COMM_LEN)) {
+	if (!strncmp(buf, "xnxxmobile.app", TASK_COMM_LEN) ||
+		!strncmp(buf, "com.app.pornhub", TASK_COMM_LEN)) {
 		struct task_kill_info *kinfo;
 
 		kinfo = kmalloc(sizeof(*kinfo), GFP_KERNEL);
